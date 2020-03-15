@@ -4,20 +4,20 @@
       alt="Vue logo"
       src="./assets/logo.png"
     >
-    <FaceTouch />
+    <TensorFlowHandTrack />
     <HelloWorld msg="Welcome to Your Vue.js App" />
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-import FaceTouch from './components/FaceTouch.vue'
+import TensorFlowHandTrack from './components/TensorFlowHandTrack.vue'
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
-    FaceTouch
+    TensorFlowHandTrack
   }
 }
 </script>
