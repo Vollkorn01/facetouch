@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-    <!--
     <div>
       <h1 class="title">
         VIDEO
@@ -10,7 +9,6 @@
         id="canvas"
         class="border"
       />
-
     </div>
 
     <div class="p20">
@@ -43,12 +41,11 @@
       id="canvas"
       class="border canvasbox"
     />
-     -->
   </div>
 </template>
 
 <script>
-//import * as handTrack from 'handtrackjs'
+import * as handTrack from 'handtrackjs'
 
 export default {
   name: 'FaceTouch',
@@ -59,11 +56,10 @@ export default {
     }
   },
   mounted: function() {
-    //this.startHandTrack()
+    this.startHandTrack()
   },
 
   methods: {
-    /*
     startHandTrack() {
       let trackButton = document.getElementById('trackbutton')
       //let updateNote = document.getElementById('updatenote')
@@ -76,6 +72,7 @@ export default {
       }
 
       // Load the model.
+      // eslint-disable-next-line no-undef
       handTrack.load(modelParams).then((lmodel) => {
         // detect objects in the image.
         this.model = lmodel
@@ -120,6 +117,7 @@ export default {
     },
 
     runDetection(video, isVideo, canvas, context) {
+        console.log('running detection on video: ', video, 'and context: ', context)
       this.model.detect(video).then((predictions) => {
         console.log('Predictions: ', predictions)
         this.model.renderPredictions(predictions, canvas, context, video)
@@ -128,7 +126,7 @@ export default {
         }
       })
     }
-    */
+    
   }
 }
 </script>
